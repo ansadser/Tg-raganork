@@ -27,3 +27,12 @@ updater, external-plugin installer, multi-session/auth (not needed on Telegram).
 
 Original core/store/handler/auth and utils/misc.js + mediaProcessors.js are obfuscated in the source zip,
 so those parts were rewritten, not converted. License: GPL-3.0 (same as upstream).
+
+## Docker (bot + local Bot API in one container)
+```
+docker build -t raganork-tg .
+docker run -d --name raganork-tg -v rtg-data:/data \
+  -e BOT_TOKEN=... -e OWNER_ID=... \
+  -e TELEGRAM_API_ID=... -e TELEGRAM_API_HASH=... raganork-tg
+```
+Call `https://api.telegram.org/bot<TOKEN>/logOut` once before first start (bot must leave the cloud API).
