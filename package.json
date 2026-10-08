@@ -1,0 +1,14 @@
+{
+  "name": "raganork-tg",
+  "version": "0.1.0",
+  "description": "Telegram port of Raganork-MD (GPL-3.0)",
+  "main": "index.js",
+  "license": "GPL-3.0-or-later",
+  "scripts": { "start": "node index.js" },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "dotenv": "^16.5.0",
+    "google-tts-api": "^2.0.2",
+    "telegraf": "^4.16.3"
+  }
+}
