@@ -47,3 +47,5 @@ Module({ pattern: "(?:tw|twitter) ?(.*)", fromMe, desc: "Twitter/X video downloa
 Module({ pattern: "pinterest ?(.*)", fromMe, desc: "Pinterest downloader", use: "download" }, (m, x) => download(m, x, /(pinterest\.|pin\.it)/i, "Pinterest"));
 Module({ pattern: "dl ?(.*)", fromMe, desc: "Download from almost any site (yt-dlp)", use: "download" }, (m, x) => download(m, x, null, "video"));
 Module({ pattern: "ytaudio ?(.*)", fromMe, desc: "Any link -> mp3 (yt-dlp)", use: "download" }, (m, x) => download(m, x, null, "media", ["-x", "--audio-format", "mp3"]));
+
+module.exports = { ytdlp, IMG, VID, AUD };
