@@ -12,5 +12,4 @@ COPY . .
 
 ENV DATA_DIR=/data/bot \
     BOT_API_ROOT=http://127.0.0.1:8081
-VOLUME /data
 CMD ["sh", "start.sh"]
